@@ -1,0 +1,40 @@
+{
+  "name": "confirmed-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate": "DATABASE_URL=postgres://postgres:postgres@localhost/confirmed node-pg-migrate",
+    "build:ts": "tsc -p ./tsconfig.json",
+    "start": "node ./dist/server/server.js",
+    "start:dev": "tsc-watch -b --noClear --onSuccess \"yarn start\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "awilix": "^4.3.4",
+    "fastify": "^3.19.2",
+    "fastify-awilix": "^1.1.0",
+    "fastify-cli": "^2.13.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-static": "^4.2.2",
+    "node-pg-migrate": "^5.10.0",
+    "pg": "^8.6.0",
+    "typescript": "^4.3.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.2",
+    "@types/pg": "^8.6.1",
+    "@types/uuid": "^8.3.1",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2",
+    "tsc-watch": "^4.4.0"
+  }
+}

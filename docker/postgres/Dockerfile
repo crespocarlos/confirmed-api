@@ -1,0 +1,7 @@
+FROM postgres:13.3-alpine
+
+ENV POSTGRES_DB confirmed
+ENV POSTGRES_USER postgres
+ENV POSTGRES_PASSWORD postgres
+
+EXPOSE 5432
